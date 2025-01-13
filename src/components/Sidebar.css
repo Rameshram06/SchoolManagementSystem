@@ -1,0 +1,50 @@
+.sidebar {
+  width: 240px;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+}
+
+.menu-title {
+  margin-left: 10px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 60px;
+  top: 0;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.menu-item a:hover {
+  text-decoration: none;
+}
+
+/* .menu-arrow {
+  float: right;
+} */
+
+/* .sub-menu {
+  padding-left: 20px;
+  background-color: #f9f9f9;
+} */

@@ -1,0 +1,75 @@
+/* Styles for the Payment Due Alert Box */
+.alert-warning {
+    padding: 15px;
+    margin: 10px auto;  /* Center the alert box horizontally */
+    font-size: 1rem;
+    white-space: nowrap;  /* Prevent the text from wrapping to the next line */
+    overflow: hidden;  /* Hide any overflow */
+    box-sizing: border-box;
+    background-color: #fff3cd;  /* Light yellow background */
+    color: #856404;  /* Dark text color */
+    border: 1px solid #ffeeba;  /* Light border */
+    border-radius: 5px;
+    position: relative;
+    width: 100%;  /* Ensure the alert box takes up full width */
+    max-width: 800px;  /* Prevent the alert from taking more than 800px on large screens */
+    display: flex;  /* Use flex to manage the child elements */
+    align-items: center;  /* Vertically align content */
+    overflow-x: auto;  /* Allow scrolling horizontally if the content is too wide */
+    text-overflow: ellipsis;  /* Prevent overflowing text */
+    white-space: nowrap;  /* Prevent text wrapping */
+  }
+  
+  /* Keyframes for the scrolling animation */
+  @keyframes scrollText {
+    0% {
+        transform: translateX(100%);  /* Start from the right side (off-screen) */
+    }
+    100% {
+        transform: translateX(-100%);  /* Move to the left side (off-screen) */
+    }
+  }
+  
+  /* Apply the scrolling animation */
+  .alert-warning {
+    animation: scrollText 15s linear infinite;
+    cursor: default;
+  }
+  
+  /* Pause the animation when the user hovers over the alert */
+  .alert-warning:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* Medium screens (tablets and below) */
+  @media (max-width: 768px) {
+    .alert-warning {
+        font-size: 0.9rem;  /* Slightly smaller font size for mobile and tablet */
+        padding: 12px;  /* Adjust padding for smaller screens */
+        width: 100%;  /* Ensure the alert takes full width */
+        max-width: 90%;  /* Limit the width on medium screens */
+    }
+  
+    /* Allow the text to scroll, even on smaller screens */
+    .alert-warning {
+        animation: scrollText 14s linear infinite;  /* Slightly faster animation on small screens */
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 576px) {
+    .alert-warning {
+        font-size: 0.8rem;  /* Further reduce font size for very small screens */
+        padding: 8px;  /* Adjust padding for small screens */
+        width: 100%;  /* Ensure the alert takes full width */
+        max-width: 95%;  /* Limit the width on small screens */
+    }
+  
+    /* Allow the scrolling animation to still work on very small screens */
+    .alert-warning {
+        animation: scrollText 12s linear infinite;  /* Even faster animation */
+    }
+  }
+  

@@ -1,0 +1,51 @@
+.page-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0; /* Remove default margin for the title */
+  padding-left: 15px; /* add padding to show the full heading */
+}
+
+.badge {
+  background-color: white;
+  pointer-events: none;
+}
+
+.badge-success {
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+.badge-warning {
+  color: #ffc107;
+  border: 1px solid #ffc107;
+}
+
+.status-col {
+  width: 100px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #4b49ac;
+  border-color: #007bff;
+  color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+  background: white;
+  border-color: #ced4da;
+  color: #797779;
+  pointer-events: none;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #4b49ac;
+  border-color: #4b49ac;
+  color: white;
+}
+
+/* Disable hover effects on cards */
+.no-hover-card:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
